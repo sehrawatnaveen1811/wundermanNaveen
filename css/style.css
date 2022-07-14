@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+
+/* ============= CSS for header ============= */
+
+header {
+    width: 100%;
+    height: 3rem;
+    background-color: white;
+}
+
+header img {
+    padding: 0.8rem 3rem;
+    max-width: 100%;
+    height: 100%;
+}
+
+
+
+/* ============= CSS for MAIN section ============= */
+
+.main {
+    position: relative;
+    width: 100%;
+}
+
+.main img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.backdrop {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, rgba(0,0,0,1) , rgba(255,255,255,0.01));
+}
+
+.profile {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+    padding-left: 3rem;
+    width: 30%;
+}
+
+.profile button {
+    padding: 0.5rem 2rem;
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+}
+
+.profile > * {
+    letter-spacing: 1px;
+    margin: 0.5rem 0;
+    font-weight: 500;
+}
+
+.profile h1 {
+    font-weight: 600;
+}
+
+
+
+/* ============= CSS for SOLUTIONS Section ============= */
+.solutions {
+    background-color: #eee;
+    padding: 1rem 0 2rem 0;
+}
+
+.section_heading {
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+    color: rgba(0, 200, 255, 1);
+    padding: 2rem 0.8rem 3rem;
+}
+
+.components {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+}
+
+.components .block {
+    width: 25%;
+    padding: 0 0.8rem;
+}
+
+.block .image, .block .info {
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.block .info ul {
+    padding: 0 1.25rem;
+    font-size: 0.9em;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image img, .info h1 {
+    margin-bottom: 1rem;
+}
+
+
+
+/* ============= CSS for PIVOT Section ============= */
+
+.pivot{
+    padding: 0 2.5rem;
+}
+
+.pivot_buttons {
+    padding: 2rem 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pivot_buttons input[type="radio"] {
+    display: none;
+}
+
+.pivot_buttons input[type="radio"]:checked + label {
+    border-bottom: 2px solid rgba(0, 0, 255, 1);
+}
+
+.pivot_buttons label {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    margin: 1rem;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.pivots {
+    position: relative;
+    padding-bottom: 3rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.hide {
+    display: none;
+}
+
+.advantages .block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 2rem;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.advantages .block .image {
+    width: 55%;
+}
+
+.advantages .block .info {
+    width: 45%;
+    padding: 0 2rem;
+}
+
+
+
+/* ============= CSS for Institutes Section ============= */
+
+.institutes {
+    padding-bottom: 3rem;
+}
+
+.institutes .components {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.institutes .components .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    height: 10rem;
+    width: auto;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.institutes .components .image img {
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* ============= CSS for FOOTER Section ============= */
+footer {
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+}
+
+footer p {
+    display: block;
+}
+
+footer span {
+    font-weight: 600;
+    /* text-decoration: underline; */
+    border-bottom: 1px solid #fff;
+}
+
+.scrollElement {
+    background-color: #eee;
+    padding: 10px 15px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.scrollElement i {
+    font-size: 1.5em;
+}
+
+
+
+/* ============= CSS for MEDIA QUERIES ============= */
+
+/* Layout for laptop devices */
+@media (max-width: 992px) {
+    .profile {
+        width: 40%;
+    }
+
+    .advantages .block {
+        margin-bottom: 15px;
+    }
+
+    .advantages .block .info {
+        padding: 0 8px;
+    }
+
+    .advantages .block .info img {
+        padding-left: 5px;
+    }
+
+}
+
+
+
+/* Layout for TABLET devices */
+@media (max-width: 768px) {    
+    .profile {
+        width: 50%;
+        font-size: 0.8em;
+    }
+
+    .components {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .components .block {
+        padding-bottom: 1rem;
+        width: 100%;
+    }
+
+    .section_heading {
+        font-size: 1.5em;
+        padding: 1rem 0.5rem 1.5rem;
+    }
+
+    .image img, .info h1 {
+        margin-bottom: 5px;
+    }
+
+    .pivot{
+        padding: 0 1rem;
+    }
+
+    .pivot_buttons {
+        padding: 1rem 0 0 0;
+    }
+
+}
+
+
+/* Layout for high resolution smartphones */
+@media (max-width: 499px) {
+    header img {
+        padding: 0.8rem 1rem;
+    }
+ 
+    .profile {
+        padding-left: 1rem;
+        width: 70%;
+        font-size: 10px;
+    }
+
+    .profile > * {
+        letter-spacing: unset;
+        margin: 5px 0;
+    }
+
+    .profile button {
+        padding: 0.25rem 1rem;
+    }
+
+    .pivot_buttons label {
+        margin: 8px;
+    }
+
+    .advantages .block {
+        padding: 0;
+    }
+
+    .advantages .block:nth-child(1) {
+        flex-direction: column-reverse;
+        margin-bottom: 2rem;
+    }
+
+    .advantages .block:nth-child(2) {
+        flex-direction: column;
+    }
+
+    .advantages .block .image, .advantages .block .info {
+        width: 100%;
+    }
+
+    .advantages .block .info img {
+        display: none;
+    }
+
+    .institutes .components {
+        padding: 0 10px;
+    }
+
+    .institutes .components .image img {
+        max-width: inherit;
+    }
+
+    .institutes .components .image {
+        padding: 5px;
+        height: 7rem;
+        width: 7rem;
+    }
+
+}
+
+
+/* Layout for low resolution smartphones */
+@media (max-width: 320px) {
+    .profile {
+        padding-left: 0.8rem;
+        width: 80%;
+    }
+
+    .profile > * {
+        margin: 2px 0;
+    }
+
+    .institutes {
+        padding-bottom: 1rem;
+    }
+
+    .institutes .components .image {
+        padding: 5px;
+        height: 4rem;
+        width: 4rem;
+    }
+
+}
